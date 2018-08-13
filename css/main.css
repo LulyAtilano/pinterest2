@@ -1,21 +1,82 @@
 body {
 	border: 0;
 	box-sizing: border-box;
+	font-family: helvetica;
+	padding: 8 10px;
 	margin: 0;
 }
 
 header {
-	background-color: gray;
+	align-items: center;
+	background-color: white;
+	border-bottom: 1px solid gray;
 	color: black;
 	display: inline-flex;
 	height: 2em;
-	margin: 0;
-	width: 100%;
+	padding: 8px 8px 20px 8px;
+	width: 99%;
+}
+
+header > div#search-container {
+	background-color: lightgray;
+	border-radius: 5px;
+	display: inline;
+	opacity: .5;
+	padding: 8px;
+	width: 70%;
+}
+
+header > div#icons-container {
+	display: inline;
+	opacity: .5;
+	padding: 8px 8px 20px 8px;
+	width: 30%;
 }
 
 header div > p {
-	margin: 0;
+	color: black;
 	display: inline;
+	margin: 0;
+}
+div#search-Container p#little-container {
+	width: 80%;
+}
+
+div#search-Container p#pines-section {
+	float: right;
+	border-left: 2px solid black;
+	padding: 0 5px;
+}
+
+header > .fab {
+	color: gray;
+	font-size: 1em;
+}
+
+header div > .fas, .fab {
+	color: gray;
+	font-size: 1.2em;
+}
+
+i.fa-pinterest {
+	color: red;
+	font-size: 1.4em;
+	margin-right: 18px;
+	position: relative;
+	left: 5px;
+}
+
+header div:last-child > * {
+	margin: 0 15px;
+}
+
+header div:last-child > span {
+	color: gray;
+	font-weight: bolder;
+}
+
+header div:last-child > span:last-child {
+	font-size: 2em;
 }
 
 nav {
@@ -26,9 +87,10 @@ nav {
 }
 
 nav > p {
-	padding: 5px;
+	padding: 9px 11px;
 	border-radius: 5px;
-	border: 1px solid black;
+	color: white;
 	display: inline-flex;
 	margin: auto;
 }
+
