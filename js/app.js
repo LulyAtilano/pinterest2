@@ -10,21 +10,28 @@ let arrayPines = ["https://images.pexels.com/photos/930676/pexels-photo-930676.j
 "https://images.pexels.com/photos/122427/roll-the-dice-craps-board-game-points-122427.jpeg"];
 
 function printPines(pin) {
-    let pinsContainer = document.getElementById('pins-container');
-    let card = document.createElement('article');
-    let button = document.createElement('button');
-    button.textContent= "...";
-
-    for (var i = 0; i < pin.length; i++) {
+    for (var i = 0; i < pin.length;i++) {
+        let pinsContainer = document.getElementById('pins-container');
+        let card = document.createElement('article');
+        let button = document.createElement('button');
+        button.textContent= "...";
         let image = document.createElement("img");
         //card.appendData(textSrc);
         //let card = "<img class='pintCard' src='" + textSrc + "'/>";
+        //let image = new Image();
         image.src = pin[i];
         card.appendChild(image);
         card.appendChild(button)
+        //pinsContainer.appendChild(card)
         //console.log(pinsContainer.appendChild(card));
-        return pinsContainer.appendChild(card);
+        console.log(card);
+        //return card;
     }
+    pinsContainer.appendChild(card);
+    /*for (const prop in pin) {
+        console.log("<img src='${pin[prop]}'/>");
+        //return <img src='${pin[prop]}'/>;
+    }*/
 }
 
 printPines(arrayPines);
