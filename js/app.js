@@ -10,23 +10,21 @@ let arrayPines = ["https://images.pexels.com/photos/930676/pexels-photo-930676.j
 "https://images.pexels.com/photos/122427/roll-the-dice-craps-board-game-points-122427.jpeg"];
 
 function printPines(pin) {
-    let card = document.createElement("article");
-    let button = document.createElement("button");
-    let imagePin = document.createElement("img");
-    //let textSrc = document.createTextNode();
+    let pinsContainer = document.getElementById('pins-container');
+    let card = document.createElement('article');
+    let button = document.createElement('button');
+    button.textContent= "...";
 
     for (var i = 0; i < pin.length; i++) {
-        let textSrc = document.createTextNode(pin[i]);
-        console.log(textSrc);
-        imagePin.src= {textSrc};
-        console.log(imagePin);
+        let image = document.createElement("img");
+        //card.appendData(textSrc);
+        //let card = "<img class='pintCard' src='" + textSrc + "'/>";
+        image.src = pin[i];
+        card.appendChild(image);
+        card.appendChild(button)
+        //console.log(pinsContainer.appendChild(card));
+        return pinsContainer.appendChild(card);
     }
-
-    /* Anidar elementos */
-    card.appendChild(imagePin);
-    card.appendChild(button);
-    let pinsContainer = document.getElementById("pins-container");
-    pinsContainer.appendChild(card);
 }
 
 printPines(arrayPines);
